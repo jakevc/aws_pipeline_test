@@ -22,6 +22,8 @@ rule bwa_map:
     output:
         temp("data/align/bwa/{sample}.sam" )
     threads: 4
+    conda: 
+	"envs/bwa.yml"
     params:
         rg = "@RG\\tID:{wildcards.sample}\\tSM:{wildcards.sample}\\tPL:illumina" 
     shell:
@@ -35,6 +37,8 @@ rule sam_to_bam:
     output: 
         temp("data/align/bwa/{sample}.bam")
     threads: 4    
+    conda: 
+	"envs/samtools.yml"
     shell:
         """
         samtools view -@ {threads} -Sb {input} -o {output}
@@ -46,6 +50,8 @@ rule sort:
     output:
         "data/align/sort/{sample}.sorted.bam"
     threads: 4     
+    conda: 
+	"envs/samtools.yml"
     shell:
         "samtools sort -@ {threads} -T {wildcards.sample} -o {output} {input}"
 
@@ -54,6 +60,8 @@ rule index:
         rules.sort.output
     output:
         "data/align/sort/{sample}.sorted.bam.bai"
+    conda:
+	"envs/samtools.yml"
     shell: 
         "samtools index {input} {output}" 
         
@@ -63,6 +71,8 @@ rule macs2:
         "data/align/sort/{sample}.sorted.bam"
     output:
         S3.remote("jv2245-test-data/peaks/{sample}_peaks.broadPeak")
+    conda: 
+	"envs/macs2.yml"
     shell:
         """
         macs2 callpeak \
