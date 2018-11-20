@@ -1,0 +1,11 @@
+Building DAG of jobs...
+MissingInputException in line 61 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+Missing input files for rule macs2:
+data/align/sort/sample_2.sorted.bai
+data/align/sort/sample_6.sorted.bai
+data/align/sort/sample_5.sorted.bai
+data/align/sort/sample_3.sorted.bai
+data/align/sort/sample_7.sorted.bai
+data/align/sort/sample_4.sorted.bai
+data/align/sort/sample_8.sorted.bai
+data/align/sort/sample_1.sorted.bai

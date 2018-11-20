@@ -1,0 +1,3 @@
+WildcardError in line 15 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+No values given for wildcard 'sample'.
+  File "/home/jv2245/test/aws_pipeline_test/Snakefile", line 15, in <module>

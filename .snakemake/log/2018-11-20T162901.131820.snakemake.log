@@ -1,0 +1,10 @@
+Building DAG of jobs...
+MissingInputException in line 13 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+Missing input files for rule all:
+jv2245-test-data/peaks/sample_2_peak.xls
+jv2245-test-data/peaks/sample_3_peak.xls
+jv2245-test-data/peaks/sample_1_peak.xls
+jv2245-test-data/peaks/sample_6_peak.xls
+jv2245-test-data/peaks/sample_5_peak.xls
+jv2245-test-data/peaks/sample_4_peak.xls
+jv2245-test-data/peaks/sample_7_peak.xls

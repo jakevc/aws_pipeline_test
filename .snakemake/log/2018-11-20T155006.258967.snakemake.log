@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in line 62 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+Wildcards in input files cannot be determined from output files:
+'sample'

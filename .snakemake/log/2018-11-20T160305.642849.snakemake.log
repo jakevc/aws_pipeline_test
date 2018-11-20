@@ -1,0 +1,20 @@
+Building DAG of jobs...
+MissingInputException in line 17 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+Missing input files for rule bwa_map:
+jv2245-test-data/genome/test_genome.fa.gz
+jv2245-test-data/fastq-test/sample_7_2.fastq
+jv2245-test-data/fastq-test/sample_2_2.fastq
+jv2245-test-data/fastq-test/sample_4_1.fastq
+jv2245-test-data/fastq-test/sample_4_2.fastq
+jv2245-test-data/fastq-test/sample_5_1.fastq
+jv2245-test-data/fastq-test/sample_8_1.fastq
+jv2245-test-data/fastq-test/sample_3_2.fastq
+jv2245-test-data/fastq-test/sample_8_2.fastq
+jv2245-test-data/fastq-test/sample_1_1.fastq
+jv2245-test-data/fastq-test/sample_7_1.fastq
+jv2245-test-data/fastq-test/sample_1_2.fastq
+jv2245-test-data/fastq-test/sample_2_1.fastq
+jv2245-test-data/fastq-test/sample_6_1.fastq
+jv2245-test-data/fastq-test/sample_3_1.fastq
+jv2245-test-data/fastq-test/sample_6_2.fastq
+jv2245-test-data/fastq-test/sample_5_2.fastq

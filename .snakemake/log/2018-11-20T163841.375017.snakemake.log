@@ -1,0 +1,2 @@
+SyntaxError in line 64 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+EOF in multi-line statement (Snakefile, line 64)

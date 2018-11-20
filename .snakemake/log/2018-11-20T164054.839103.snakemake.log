@@ -1,0 +1,146 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	1	all
+	8	bwa_map
+	8	macs2
+	8	sort
+	25
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_2_1.fastq, jv2245-test-data/fastq_test/sample_2_2.fastq
+    output: data/align/bwa/sample_2.sam
+    jobid: 22
+    wildcards: sample=sample_2
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_5_1.fastq, jv2245-test-data/fastq_test/sample_5_2.fastq
+    output: data/align/bwa/sample_5.sam
+    jobid: 20
+    wildcards: sample=sample_5
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_6_1.fastq, jv2245-test-data/fastq_test/sample_6_2.fastq
+    output: data/align/bwa/sample_6.sam
+    jobid: 23
+    wildcards: sample=sample_6
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_7_1.fastq, jv2245-test-data/fastq_test/sample_7_2.fastq
+    output: data/align/bwa/sample_7.sam
+    jobid: 21
+    wildcards: sample=sample_7
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_8_1.fastq, jv2245-test-data/fastq_test/sample_8_2.fastq
+    output: data/align/bwa/sample_8.sam
+    jobid: 17
+    wildcards: sample=sample_8
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_4_1.fastq, jv2245-test-data/fastq_test/sample_4_2.fastq
+    output: data/align/bwa/sample_4.sam
+    jobid: 18
+    wildcards: sample=sample_4
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_1_1.fastq, jv2245-test-data/fastq_test/sample_1_2.fastq
+    output: data/align/bwa/sample_1.sam
+    jobid: 24
+    wildcards: sample=sample_1
+
+
+[Tue Nov 20 16:40:57 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_3_1.fastq, jv2245-test-data/fastq_test/sample_3_2.fastq
+    output: data/align/bwa/sample_3.sam
+    jobid: 19
+    wildcards: sample=sample_3
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_3.sam
+    output: data/align/sort/sample_3.sorted.bam
+    jobid: 11
+    wildcards: sample=sample_3
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_8.sam
+    output: data/align/sort/sample_8.sorted.bam
+    jobid: 9
+    wildcards: sample=sample_8
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_1.sam
+    output: data/align/sort/sample_1.sorted.bam
+    jobid: 16
+    wildcards: sample=sample_1
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_4.sam
+    output: data/align/sort/sample_4.sorted.bam
+    jobid: 10
+    wildcards: sample=sample_4
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_7.sam
+    output: data/align/sort/sample_7.sorted.bam
+    jobid: 13
+    wildcards: sample=sample_7
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_5.sam
+    output: data/align/sort/sample_5.sorted.bam
+    jobid: 12
+    wildcards: sample=sample_5
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_6.sam
+    output: data/align/sort/sample_6.sorted.bam
+    jobid: 15
+    wildcards: sample=sample_6
+
+
+[Tue Nov 20 16:40:57 2018]
+rule sort:
+    input: data/align/bwa/sample_2.sam
+    output: data/align/sort/sample_2.sorted.bam
+    jobid: 14
+    wildcards: sample=sample_2
+
+
+[Tue Nov 20 16:40:57 2018]
+rule macs2:
+    input: data/align/sort/sample_3.sorted.bam
+    output: jv2245-test-data/peaks/sample_3_peaks.broadPeak
+    jobid: 3
+    wildcards: sample=sample_3
+
+RuleException in line 61 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+NameError: The name 'sample' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

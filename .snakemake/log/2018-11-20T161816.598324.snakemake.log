@@ -1,0 +1,235 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	1	all
+	8	bwa_map
+	8	index
+	1	macs2
+	8	sort
+	26
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_2_1.fastq, jv2245-test-data/fastq_test/sample_2_2.fastq
+    output: data/align/bwa/sample_2.sam
+    jobid: 19
+    reason: Missing output files: data/align/bwa/sample_2.sam
+    wildcards: sample=sample_2
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_5_1.fastq, jv2245-test-data/fastq_test/sample_5_2.fastq
+    output: data/align/bwa/sample_5.sam
+    jobid: 23
+    reason: Missing output files: data/align/bwa/sample_5.sam
+    wildcards: sample=sample_5
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_1_1.fastq, jv2245-test-data/fastq_test/sample_1_2.fastq
+    output: data/align/bwa/sample_1.sam
+    jobid: 18
+    reason: Missing output files: data/align/bwa/sample_1.sam
+    wildcards: sample=sample_1
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_6_1.fastq, jv2245-test-data/fastq_test/sample_6_2.fastq
+    output: data/align/bwa/sample_6.sam
+    jobid: 21
+    reason: Missing output files: data/align/bwa/sample_6.sam
+    wildcards: sample=sample_6
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_8_1.fastq, jv2245-test-data/fastq_test/sample_8_2.fastq
+    output: data/align/bwa/sample_8.sam
+    jobid: 20
+    reason: Missing output files: data/align/bwa/sample_8.sam
+    wildcards: sample=sample_8
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_3_1.fastq, jv2245-test-data/fastq_test/sample_3_2.fastq
+    output: data/align/bwa/sample_3.sam
+    jobid: 22
+    reason: Missing output files: data/align/bwa/sample_3.sam
+    wildcards: sample=sample_3
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_7_1.fastq, jv2245-test-data/fastq_test/sample_7_2.fastq
+    output: data/align/bwa/sample_7.sam
+    jobid: 25
+    reason: Missing output files: data/align/bwa/sample_7.sam
+    wildcards: sample=sample_7
+
+
+[Tue Nov 20 16:18:19 2018]
+rule bwa_map:
+    input: jv2245-test-data/genome/test-genome.fa.gz, jv2245-test-data/fastq_test/sample_4_1.fastq, jv2245-test-data/fastq_test/sample_4_2.fastq
+    output: data/align/bwa/sample_4.sam
+    jobid: 24
+    reason: Missing output files: data/align/bwa/sample_4.sam
+    wildcards: sample=sample_4
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_4.sam
+    output: data/align/sort/sample_4.sorted.bam
+    jobid: 15
+    reason: Missing output files: data/align/sort/sample_4.sorted.bam; Input files updated by another job: data/align/bwa/sample_4.sam
+    wildcards: sample=sample_4
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_7.sam
+    output: data/align/sort/sample_7.sorted.bam
+    jobid: 16
+    reason: Missing output files: data/align/sort/sample_7.sorted.bam; Input files updated by another job: data/align/bwa/sample_7.sam
+    wildcards: sample=sample_7
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_8.sam
+    output: data/align/sort/sample_8.sorted.bam
+    jobid: 4
+    reason: Missing output files: data/align/sort/sample_8.sorted.bam; Input files updated by another job: data/align/bwa/sample_8.sam
+    wildcards: sample=sample_8
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_1.sam
+    output: data/align/sort/sample_1.sorted.bam
+    jobid: 2
+    reason: Missing output files: data/align/sort/sample_1.sorted.bam; Input files updated by another job: data/align/bwa/sample_1.sam
+    wildcards: sample=sample_1
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_6.sam
+    output: data/align/sort/sample_6.sorted.bam
+    jobid: 5
+    reason: Missing output files: data/align/sort/sample_6.sorted.bam; Input files updated by another job: data/align/bwa/sample_6.sam
+    wildcards: sample=sample_6
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_3.sam
+    output: data/align/sort/sample_3.sorted.bam
+    jobid: 6
+    reason: Missing output files: data/align/sort/sample_3.sorted.bam; Input files updated by another job: data/align/bwa/sample_3.sam
+    wildcards: sample=sample_3
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_5.sam
+    output: data/align/sort/sample_5.sorted.bam
+    jobid: 8
+    reason: Missing output files: data/align/sort/sample_5.sorted.bam; Input files updated by another job: data/align/bwa/sample_5.sam
+    wildcards: sample=sample_5
+
+
+[Tue Nov 20 16:18:19 2018]
+rule sort:
+    input: data/align/bwa/sample_2.sam
+    output: data/align/sort/sample_2.sorted.bam
+    jobid: 3
+    reason: Missing output files: data/align/sort/sample_2.sorted.bam; Input files updated by another job: data/align/bwa/sample_2.sam
+    wildcards: sample=sample_2
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_8.sorted.bam
+    output: data/align/sort/sample_8.sorted.bam.bai
+    jobid: 12
+    reason: Missing output files: data/align/sort/sample_8.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_8.sorted.bam
+    wildcards: sample=sample_8
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_6.sorted.bam
+    output: data/align/sort/sample_6.sorted.bam.bai
+    jobid: 17
+    reason: Missing output files: data/align/sort/sample_6.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_6.sorted.bam
+    wildcards: sample=sample_6
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_1.sorted.bam
+    output: data/align/sort/sample_1.sorted.bam.bai
+    jobid: 7
+    reason: Missing output files: data/align/sort/sample_1.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_1.sorted.bam
+    wildcards: sample=sample_1
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_3.sorted.bam
+    output: data/align/sort/sample_3.sorted.bam.bai
+    jobid: 10
+    reason: Missing output files: data/align/sort/sample_3.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_3.sorted.bam
+    wildcards: sample=sample_3
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_5.sorted.bam
+    output: data/align/sort/sample_5.sorted.bam.bai
+    jobid: 9
+    reason: Missing output files: data/align/sort/sample_5.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_5.sorted.bam
+    wildcards: sample=sample_5
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_2.sorted.bam
+    output: data/align/sort/sample_2.sorted.bam.bai
+    jobid: 14
+    reason: Missing output files: data/align/sort/sample_2.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_2.sorted.bam
+    wildcards: sample=sample_2
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_4.sorted.bam
+    output: data/align/sort/sample_4.sorted.bam.bai
+    jobid: 11
+    reason: Missing output files: data/align/sort/sample_4.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_4.sorted.bam
+    wildcards: sample=sample_4
+
+
+[Tue Nov 20 16:18:19 2018]
+rule index:
+    input: data/align/sort/sample_7.sorted.bam
+    output: data/align/sort/sample_7.sorted.bam.bai
+    jobid: 13
+    reason: Missing output files: data/align/sort/sample_7.sorted.bam.bai; Input files updated by another job: data/align/sort/sample_7.sorted.bam
+    wildcards: sample=sample_7
+
+
+[Tue Nov 20 16:18:19 2018]
+rule macs2:
+    input: data/align/sort/sample_1.sorted.bam, data/align/sort/sample_2.sorted.bam, data/align/sort/sample_3.sorted.bam, data/align/sort/sample_4.sorted.bam, data/align/sort/sample_5.sorted.bam, data/align/sort/sample_6.sorted.bam, data/align/sort/sample_7.sorted.bam, data/align/sort/sample_8.sorted.bam, data/align/sort/sample_1.sorted.bam.bai, data/align/sort/sample_2.sorted.bam.bai, data/align/sort/sample_3.sorted.bam.bai, data/align/sort/sample_4.sorted.bam.bai, data/align/sort/sample_5.sorted.bam.bai, data/align/sort/sample_6.sorted.bam.bai, data/align/sort/sample_7.sorted.bam.bai, data/align/sort/sample_8.sorted.bam.bai
+    output: jv2245-test-data/peaks/
+    jobid: 1
+    reason: Missing output files: jv2245-test-data/peaks/; Input files updated by another job: data/align/sort/sample_1.sorted.bam, data/align/sort/sample_2.sorted.bam, data/align/sort/sample_8.sorted.bam, data/align/sort/sample_6.sorted.bam, data/align/sort/sample_3.sorted.bam, data/align/sort/sample_1.sorted.bam.bai, data/align/sort/sample_2.sorted.bam.bai, data/align/sort/sample_5.sorted.bam, data/align/sort/sample_5.sorted.bam.bai, data/align/sort/sample_3.sorted.bam.bai, data/align/sort/sample_8.sorted.bam.bai, data/align/sort/sample_4.sorted.bam, data/align/sort/sample_4.sorted.bam.bai, data/align/sort/sample_7.sorted.bam.bai, data/align/sort/sample_7.sorted.bam, data/align/sort/sample_6.sorted.bam.bai
+
+RuleException in line 61 of /home/jv2245/test/aws_pipeline_test/Snakefile:
+NameError: The name 'sample' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
