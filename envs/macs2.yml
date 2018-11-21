@@ -1,4 +1,4 @@
 channels:
-        - bioconda
-dependencies: 
-        - macs2=2.1.2
+  - bioconda
+dependencies:
+  - macs2 =2.1.2
