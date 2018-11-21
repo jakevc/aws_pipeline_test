@@ -2,7 +2,7 @@
 
 # import pre-configured s3 remote
 from snakemake.remote.S3 import RemoteProvider as S3RemoteProvider
-S3 = S3RemoteProvider(access_key_id="AKIAI2SP5BM5QZN5RQLQ", secret_access_key="KUntFWs0ZA753oQw5zlY1ggW4348TVdLDfdZxLdD")
+S3 = S3RemoteProvider()
 
 # samples 1-9
 SAMPLES =  ["sample_{}".format(num) for num in range(1,9)]
